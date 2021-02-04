@@ -1,0 +1,13 @@
+.nav{
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.1rem;
+  color: #fff;
+}
