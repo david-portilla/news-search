@@ -1,6 +1,13 @@
+import Header from './comonents/Header';
+
 function App () {
   return (
-    <h1>React news</h1>
+    <>
+      <Header title='Search Colombian News' />
+      <div className="container white">
+
+      </div>
+    </>
   );
 }
 
