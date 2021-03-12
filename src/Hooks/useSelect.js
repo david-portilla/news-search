@@ -3,13 +3,22 @@ import React, {useState} from 'react'
 const useSelect = (initialState, options) => {
 
   //Hook Initial State
-  const [state, updateState] = useState('')
+  const [state, updateState] = useState(initialState)
 
   const SelectNews = () => (
     <select
       className="browser-default"
+      value={state}
+      onChange={e => updateState(e.target.value)}
     >
-      <option value="">Select an option</option>
+      {options.map(option => (
+        <option
+          key={option.value}
+          value={option.value}>
+          {option.label}
+        </option>
+
+      ))}
     </select>
   )
 
