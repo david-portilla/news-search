@@ -14,7 +14,7 @@ const Form = ({saveCategory}) => {
   ]
 
   // useSelect Custom Hook
-  const [category, SelectNews] = useSelect('technology', OPTIONS)
+  const [category, SelectNews] = useSelect('general', OPTIONS)
 
   // on submit pass category to app
   const searchNews = e => {
