@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const useSelect = (initialState, options) => {
 
-  //Hook Initial State
+  // Hook Initial State
   const [state, updateState] = useState(initialState)
 
   const SelectNews = () => (
