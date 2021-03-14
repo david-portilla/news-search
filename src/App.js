@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import Form from './components/Form';
 import Header from './components/Header';
+import ListNews from './components/ListNews';
 
 function App () {
   // set initial category
@@ -13,12 +14,11 @@ function App () {
       const URL = `https://newsapi.org/v2/top-headlines?country=co&category=${ category }&apiKey=4c5cc9319a1c42ab8d1cd86bbd22e120`
       const response = await fetch(URL)
       const news = await response.json()
+      console.log(news.articles)
       saveNews(news.articles)
     }
     requestAPI()
   }, [category])
-
-
 
   return (
     <>
@@ -26,6 +26,9 @@ function App () {
       <div className="container white">
         <Form
           saveCategory={saveCategory}
+        />
+        <ListNews
+          news={news}
         />
       </div>
     </>
