@@ -14,7 +14,6 @@ function App () {
       const URL = `https://newsapi.org/v2/top-headlines?country=co&category=${ category }&apiKey=4c5cc9319a1c42ab8d1cd86bbd22e120`
       const response = await fetch(URL)
       const news = await response.json()
-      // console.log(news.articles)
       saveNews(news.articles)
     }
     requestAPI()
