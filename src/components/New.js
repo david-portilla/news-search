@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const New = ({newItem}) => {
   const {source, description, title, url, urlToImage} = newItem
@@ -32,6 +33,10 @@ const New = ({newItem}) => {
       </div>
     </div>
   )
+}
+
+New.propTypes = {
+  newItem: PropTypes.object.isRequired
 }
 
 export default New

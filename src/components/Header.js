@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './Header.module.css'
+import PropTypes from 'prop-types'
 
 const Header = ({title}) => {
   return (
@@ -7,6 +8,10 @@ const Header = ({title}) => {
       <a href="#!" className={`${ styles.logo } center`}>{title}</a>
     </nav>
   )
+}
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired
 }
 
 export default Header

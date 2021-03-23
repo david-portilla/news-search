@@ -1,6 +1,7 @@
 import React from 'react'
 import useSelect from '../Hooks/useSelect'
 import styles from './Form.module.css'
+import PropTypes from 'prop-types'
 
 const Form = ({saveCategory}) => {
   const OPTIONS = [
@@ -44,6 +45,10 @@ const Form = ({saveCategory}) => {
       </div>
     </div>
   )
+}
+
+Form.propTypes = {
+  saveCategory: PropTypes.func.isRequired
 }
 
 export default Form
